@@ -1,5 +1,5 @@
 """
-WSGI config for zend_blog project.
+WSGI config for zendblog project.
 
 It exposes the WSGI callable as a module-level variable named ``application``.
 
