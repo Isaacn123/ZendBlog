@@ -13,6 +13,9 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 from pathlib import Path
 import os
 import environ
+import cloudinary
+import cloudinary.uploader
+import cloudinary.api
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -22,6 +25,13 @@ TEMPLATE_DIR = os.path.join(BASE_DIR,'templates')
 
 # SECURITY WARNING: keep the secret key used in production secret!
 
+# MEDIA_ROOT = '/media/'
+# MEDIA_ROOT =  os.path.join(BASE_DIR,'media/')
+cloudinary.config( 
+  cloud_name = "ivhfizons", 
+  api_key = "842755312754361", 
+  api_secret = "BMO579r1fQKABRKoV3bHRbmd7e4" 
+)
 
 
 # Initialise environment variables
@@ -46,7 +56,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'blog'
+    'blog',
+    'cloudinary'
 ]
 
 MIDDLEWARE = [

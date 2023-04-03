@@ -1,1 +1,1 @@
-web: gunicorn zend_blog.wsgi
+web: gunicorn zendblog.wsgi
