@@ -58,7 +58,6 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'whitenoise.runserver_nostatic',
     'django.contrib.staticfiles',
-    'ckeditor',
     'blog',
     'cloudinary',
 ]
@@ -158,11 +157,8 @@ USE_TZ = True
 # ]
 # STATIC_ROOT = os.path.join(BASE_DIR, "assets")
 # if not DEBUG:
-# STATIC_URL = '/static/'
-# STATIC_ROOT = os.path.join(BASE_DIR, "static")
-STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATIC_ROOT = os.path.join(BASE_DIR, "static")
 # STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
     
     # STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
@@ -170,8 +166,8 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 #     os.path.join(BASE_DIR, 'static'),
 #     # '/var/www/static/',
 # ]
-MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, "media")
+# MEDIA_URL = '/media/'
+# MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 # else:
     # STATIC_URL = 'static/'
