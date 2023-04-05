@@ -53,9 +53,10 @@ INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
-    'whitenoise.runserver_nostatic', # no static
+    # 'whitenoise.runserver_nostatic', # no static
     'django.contrib.sessions',
     'django.contrib.messages',
+    'whitenoise.runserver_nostatic',
     'django.contrib.staticfiles',
     'blog',
     'cloudinary',
@@ -157,7 +158,7 @@ USE_TZ = True
 # STATIC_ROOT = os.path.join(BASE_DIR, "assets")
 # if not DEBUG:
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATIC_ROOT = BASE_DIR / "staticfiles"
 # STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
     
     # STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
