@@ -58,6 +58,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'whitenoise.runserver_nostatic',
     'django.contrib.staticfiles',
+    'ckeditor',
     'blog',
     'cloudinary',
 ]
