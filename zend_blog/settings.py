@@ -61,6 +61,7 @@ INSTALLED_APPS = [
     'ckeditor',
     'blog',
     'cloudinary',
+    'embed_video',
 ]
 
 MIDDLEWARE = [

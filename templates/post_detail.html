@@ -1,4 +1,4 @@
-{% extends 'base.html' %} {% block content %}
+{% extends 'base.html' %} {% block content %}{% load embed_video_tags %}
 
 <div class="container">
   <div class="row">
@@ -8,6 +8,7 @@
         <img  class="card-img-top" src="{{object.image_header.url}}" alt="no image" />
         <p class=" text-muted">{{ post.author }} | {{ post.created_on }}</p>
         <p class="card-text ">{{ object.content | safe }}</p>
+        {% video post.post_Video 'medium' %}
       </div>
     </div>
     {% block sidebar %} {% include 'sidebar.html' %} {% endblock sidebar %}
