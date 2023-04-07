@@ -32,11 +32,15 @@ class Post(models.Model):
     def __str__(self):
         return self.title
 
-# class Image(models.Model):
-#     imagetitle = models.CharField(max_length=200,unique=True)
-#     # image = models.ImageField(upload_to='image')
-#     image = models.ImageField(upload_to='users/%Y/%m/%d/', blank=True)
+class PolicyPost(models.Model):
+    title = models.CharField(max_length=200, unique=True)
+    slug = models.SlugField(max_length=200, unique=True)
+    author = models.ForeignKey(User,on_delete=models.CASCADE)
+    content = RichTextField()
+    updated_on = models.DateTimeField(auto_now=True)
+    created_on = models.DateTimeField(auto_now_add=True)
+    status = models.IntegerField(choices=STATUS,default=0)
 
-#     def __str__(self):
-#         return self.imagetitle
+    def __str__(self):
+        return self.title
     
